@@ -18,7 +18,7 @@ const buildPosts = (blogPosts) => {
     let blogPostsContent = "";
     for(var blogPost of blogPosts) {
         const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
-        const postLink = `post.html=${blogPost.id}`;
+        const postLink = `HTML/post.html=${blogPost.id}`;
 
         blogPostsContent += `
             <a class="post-link" href="${postLink}">
