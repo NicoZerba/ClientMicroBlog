@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8080/posts";
+const API_URL = "http://localhost:8080/posts/";
 window.onload = () => {
     getPosts();
 }
@@ -18,7 +18,7 @@ const buildPosts = (blogPosts) => {
     let blogPostsContent = "";
     for(var blogPost of blogPosts) {
         const postDate = new Date(parseInt(blogPost.added_date)).toDateString();
-        const postLink = `/post.html?id=${blogPost.id}`;
+        const postLink = `post.html=${blogPost.id}`;
 
         blogPostsContent += `
             <a class="post-link" href="${postLink}">
